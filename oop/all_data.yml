@@ -1,0 +1,62 @@
+---
+- - !ruby/object:Book
+    title: King Lear
+    author: William Shakespeare
+  - !ruby/object:Book
+    title: Great Expectations
+    author: Charles Dickens
+  - !ruby/object:Book
+    title: Bridge of Clay
+    author: Markus Zusak
+  - !ruby/object:Book
+    title: Red Queen
+    author: Victoria Aveyard
+  - !ruby/object:Book
+    title: Throne of Glass
+    author: Sarah J Maas
+- 
+- - !ruby/object:Reader
+    name: John
+    email: john@email.com
+    city: NY
+    street: Jackson street
+    house: '24'
+  - !ruby/object:Reader
+    name: Joe
+    email: joe@gmail.com
+    city: LA
+    street: Ocean street
+    house: '12'
+  - !ruby/object:Reader
+    name: Kate
+    email: kate@gmail.com
+    city: DC
+    street: Plaza street
+    house: '19'
+  - !ruby/object:Reader
+    name: Mike
+    email: mike@gmail.com
+    city: Tokyo
+    street: Shibua street
+    house: '9'
+  - !ruby/object:Reader
+    name: Helen
+    email: helen@gmail.com
+    city: Ohio
+    street: Rose street
+    house: '1'
+- - !ruby/object:Author
+    name: William Shakespeare
+    biography: William Biography
+  - !ruby/object:Author
+    name: Charles Dickens
+    biography: Charles Biography
+  - !ruby/object:Author
+    name: Markus Zusak
+    biography: Markus biography
+  - !ruby/object:Author
+    name: Victoria Aveyard
+    biography: Victoria biography
+  - !ruby/object:Author
+    name: Sarah J Maas
+    biography: Sarah biography
