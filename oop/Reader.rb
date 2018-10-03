@@ -6,7 +6,7 @@ class Reader
     @email = email
     @city = city
     @street = street
-    @house = house
+    @house = house.to_i
   end
 
 end

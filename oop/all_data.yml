@@ -20,31 +20,31 @@
     email: john@email.com
     city: NY
     street: Jackson street
-    house: '24'
+    house: 24
   - !ruby/object:Reader
     name: Joe
     email: joe@gmail.com
     city: LA
     street: Ocean street
-    house: '12'
+    house: 12
   - !ruby/object:Reader
     name: Kate
     email: kate@gmail.com
     city: DC
     street: Plaza street
-    house: '19'
+    house: 19
   - !ruby/object:Reader
     name: Mike
     email: mike@gmail.com
     city: Tokyo
     street: Shibua street
-    house: '9'
+    house: 9
   - !ruby/object:Reader
     name: Helen
     email: helen@gmail.com
     city: Ohio
     street: Rose street
-    house: '1'
+    house: 1
 - - !ruby/object:Author
     name: William Shakespeare
     biography: William Biography
