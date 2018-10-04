@@ -9,4 +9,8 @@ class Reader
     @house = house.to_i
   end
 
+  def reader_name
+    "Reader #{name}"
+  end
+
 end

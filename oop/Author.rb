@@ -6,8 +6,8 @@ class Author
     @biography = biography
   end
 
-  def full_author_info
-    "Author name: #{@name}, Biography: #{@biography}"
+  def author_name
+    "#{name}"
   end
 
 end
