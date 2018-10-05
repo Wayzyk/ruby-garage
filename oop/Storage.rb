@@ -1,8 +1,8 @@
+require './Author.rb'
+require './Book.rb'
+require './Order.rb'
+require './Reader.rb'
 module Storage
-  Author = Struct.new(:name, :biography)
-  Reader = Struct.new(:name, :email, :city, :street, :house)
-  Book = Struct.new(:title, :author)
-  Order = Struct.new(:book, :reader, :date)
 
   def load
     @author1 = Author.new('William Shakespeare', 'William Biography')
@@ -17,18 +17,16 @@ module Storage
     @reader4 = Reader.new('Mike', 'mike@gmail.com', 'Tokyo', 'Shibua street', '9')
     @reader5 = Reader.new('Helen', 'helen@gmail.com', 'Ohio', 'Rose street', '1')
 
-    @date = Time.at(rand * Time.now.to_i).to_s
+    @book1 = Book.new('King Lear', @author1.author_name)
+    @book2 = Book.new('Great Expectations',  @author2.author_name)
+    @book3 = Book.new('Bridge of Clay',  @author3.author_name)
+    @book4 = Book.new('Red Queen',  @author4.author_name)
+    @book5 = Book.new('Throne of Glass',  @author5.author_name)
 
-    @book1 = Book.new('King Lear', @author1)
-    @book2 = Book.new('Great Expectations',  @author2)
-    @book3 = Book.new('Bridge of Clay',  @author3)
-    @book4 = Book.new('Red Queen',  @author4)
-    @book5 = Book.new('Throne of Glass',  @author5)
-
-    @order1 = Order.new('King Lear', @reader1, @date)
-    @order2 = Order.new('Great Expectations', @reader2, @date)
-    @order3 = Order.new('Bridge of Clay', @reader3, @date)
-    @order4 = Order.new('Throne of Glass', @reader4, @date)
-    @order5 = Order.new('Red Queen', @reader5, @date)
+    @order1 = Order.new(@book1.book_title, @reader1.reader_name, @date)
+    @order2 = Order.new(@book2.book_title, @reader2.reader_name, @date)
+    @order3 = Order.new(@book3.book_title, @reader3.reader_name, @date)
+    @order4 = Order.new(@book4.book_title, @reader4.reader_name, @date)
+    @order5 = Order.new(@book5.book_title, @reader5.reader_name, @date)
   end
 end

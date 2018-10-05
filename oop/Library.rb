@@ -14,21 +14,24 @@ class Library
   end
 
   def filling_arrays
-    @books << @author1
-    @books << @author2
-    @books << @author3
-    @books << @author4
-    @books << @author5
+    @books << @book1
+    @books << @book2
+    @books << @book3
+    @books << @book4
+    @books << @book5
+
     @readers << @reader1
     @readers << @reader2
     @readers << @reader3
     @readers << @reader4
     @readers << @reader5
+
     @orders << @order1
     @orders << @order2
     @orders << @order3
     @orders << @order4
     @orders << @order5
+
     @authors << @author1
     @authors << @author2
     @authors << @author3
@@ -38,7 +41,7 @@ class Library
 
   def save_info_to_file
     all_data = []
-    all_data.push(@books, @order, @readers, @authors)
+    all_data.push( @readers, @authors, @books, @orders )
     File.open("all_data.yml", "w") { |file| file.write(all_data.to_yaml) }
   end
 
