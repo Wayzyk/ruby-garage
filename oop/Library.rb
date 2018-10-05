@@ -20,17 +20,17 @@ class Library
     @books << @book4
     @books << @book5
 
-    @readers << @reader1
-    @readers << @reader2
-    @readers << @reader3
-    @readers << @reader4
-    @readers << @reader5
-
     @orders << @order1
     @orders << @order2
     @orders << @order3
     @orders << @order4
     @orders << @order5
+
+    @readers << @reader1
+    @readers << @reader2
+    @readers << @reader3
+    @readers << @reader4
+    @readers << @reader5
 
     @authors << @author1
     @authors << @author2
@@ -41,7 +41,7 @@ class Library
 
   def save_info_to_file
     all_data = []
-    all_data.push( @readers, @authors, @books, @orders )
+    all_data.push( @books, @orders, @readers, @authors )
     File.open("all_data.yml", "w") { |file| file.write(all_data.to_yaml) }
   end
 

@@ -1,4 +1,39 @@
 ---
+- - !ruby/object:Book
+    title: King Lear
+    author: William Shakespeare
+  - !ruby/object:Book
+    title: Great Expectations
+    author: Charles Dickens
+  - !ruby/object:Book
+    title: Bridge of Clay
+    author: Markus Zusak
+  - !ruby/object:Book
+    title: Red Queen
+    author: Victoria Aveyard
+  - !ruby/object:Book
+    title: Throne of Glass
+    author: Sarah J Maas
+- - !ruby/object:Order
+    book: King Lear
+    reader: John
+    date: '1976-12-21 00:21:13 +0300'
+  - !ruby/object:Order
+    book: Great Expectations
+    reader: Joe
+    date: '2001-05-24 05:59:01 +0300'
+  - !ruby/object:Order
+    book: Bridge of Clay
+    reader: Kate
+    date: '2004-04-01 03:20:19 +0300'
+  - !ruby/object:Order
+    book: Red Queen
+    reader: Mike
+    date: '1982-07-07 05:53:43 +0400'
+  - !ruby/object:Order
+    book: Throne of Glass
+    reader: Helen
+    date: '1984-07-17 10:21:18 +0400'
 - - !ruby/object:Reader
     name: John
     email: john@email.com
@@ -44,38 +79,3 @@
   - !ruby/object:Author
     name: Sarah J Maas
     biography: Sarah biography
-- - !ruby/object:Book
-    title: King Lear
-    author: William Shakespeare
-  - !ruby/object:Book
-    title: Great Expectations
-    author: Charles Dickens
-  - !ruby/object:Book
-    title: Bridge of Clay
-    author: Markus Zusak
-  - !ruby/object:Book
-    title: Red Queen
-    author: Victoria Aveyard
-  - !ruby/object:Book
-    title: Throne of Glass
-    author: Sarah J Maas
-- - !ruby/object:Order
-    book: King Lear
-    reader: John
-    date: '1992-05-12 05:00:19 +0300'
-  - !ruby/object:Order
-    book: Great Expectations
-    reader: Joe
-    date: '1976-08-31 06:18:10 +0300'
-  - !ruby/object:Order
-    book: Bridge of Clay
-    reader: Kate
-    date: '1997-01-31 02:43:08 +0200'
-  - !ruby/object:Order
-    book: Red Queen
-    reader: Mike
-    date: '1987-02-08 01:32:47 +0300'
-  - !ruby/object:Order
-    book: Throne of Glass
-    reader: Helen
-    date: '2002-01-30 23:58:45 +0200'
