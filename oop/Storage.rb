@@ -2,9 +2,10 @@ require './Author.rb'
 require './Book.rb'
 require './Order.rb'
 require './Reader.rb'
+require 'yaml'
 module Storage
 
-  def load
+  def load_to_file
     @author1 = Author.new('William Shakespeare', 'William Biography')
     @author2 = Author.new('Charles Dickens', 'Charles Biography')
     @author3 = Author.new('Markus Zusak', 'Markus biography')
@@ -29,4 +30,18 @@ module Storage
     @order4 = Order.new(@book4.book_title, @reader4.reader_name, @date)
     @order5 = Order.new(@book5.book_title, @reader5.reader_name, @date)
   end
+
+  def download_from_file
+    all_data = YAML.load(File.read("all_data.yml"))
+  end
+
+  def download_by_categories
+    hard_data = File.open("all_data.yml") { |yf| YAML::load (yf) }
+    hard_data.each_pair do |key, value|
+      keys = "#{key}".capitalize
+      p s"Output data by categories, if you want change it remove tag <p> from line in method"
+      p values = "#{value}".split('#').join('[]').delete('\[\/\]')
+    end
+  end
+
 end

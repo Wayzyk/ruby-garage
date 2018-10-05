@@ -40,17 +40,22 @@ class Library
   end
 
   def save_info_to_file
-    all_data = []
-    all_data.push( @books, @orders, @readers, @authors )
+    all_data = { books: @books, orders: @orders, readers: @readers, authors: @authors }
     File.open("all_data.yml", "w") { |file| file.write(all_data.to_yaml) }
   end
 
 end
 
 library = Library.new
-library.load
+#load all data to arrays
+library.load_to_file
 library.filling_arrays
+#write all data to file
 library.save_info_to_file
+#download all data from file
+library.download_from_file
+#download all data from file by categories
+library.download_by_categories
 
 # puts "Often takes the book: \r\n #{library.active_reader}"
 # puts "The most popular book: \r\n #{library.popular_book}"
