@@ -39,8 +39,8 @@ module Storage
     hard_data = File.open("all_data.yml") { |yf| YAML::load (yf) }
     hard_data.each_pair do |key, value|
       keys = "#{key}".capitalize
-      p s"Output data by categories, if you want change it remove tag <p> from line in method"
-      p values = "#{value}".split('#').join('[]').delete('\[\/\]')
+      values = "#{value}".split('#').join('[]').delete('\[\/\]')
+      p sum = keys + values
     end
   end
 

@@ -5,6 +5,7 @@ require 'yaml'
 class Library
   attr_accessor :books, :orders, :readers, :authors
   include Storage
+  include Info
 
   def initialize
     @books = []
@@ -57,6 +58,6 @@ library.download_from_file
 #download all data from file by categories
 library.download_by_categories
 
-# puts "Often takes the book: \r\n #{library.active_reader}"
-# puts "The most popular book: \r\n #{library.popular_book}"
-# puts "How many people ordered one of the three most popular books: \r\n #{library.top_3_book_users}"
+puts "Often takes the book: \r\n #{library.active_reader}"
+puts "The most popular book: \r\n #{library.popular_book}"
+puts "How many people ordered one of the three most popular books: \r\n #{library.top_3_book_users}"
