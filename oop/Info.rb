@@ -1,8 +1,12 @@
+require './Author.rb'
+require './Book.rb'
+require './Order.rb'
+require './Reader.rb'
 module Info
 
-  def active_reader
-    @orders.group_by(&:reader).sort_by { |reader, order| order.count }.reverse.dig(0,0)
-  end
+   def active_reader
+     @orders.group_by(&:reader).sort_by { |reader, order| order.count }.reverse.dig(0,0)
+   end
 
   def popular_book
     sorted_books.dig(0,0)
