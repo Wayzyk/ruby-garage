@@ -8,5 +8,4 @@ class Reader
     @street = street
     @house = house.to_i
   end
-
 end

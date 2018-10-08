@@ -15,7 +15,6 @@ class Library
   end
 
   def filling_arrays
-
     @readers = [
       Reader.new('John', 'john@email.com', 'NY', 'Jackson street', '24'),
       Reader.new('Joe', 'joe@gmail.com', 'LA', 'Ocean street', '12'),
@@ -34,10 +33,10 @@ class Library
 
     @books = [
       Book.new('King Lear', @authors[0].name),
-      Book.new('Great Expectations',  @authors[1].name),
-      Book.new('Bridge of Clay',  @authors[2].name),
-      Book.new('Red Queen',  @authors[3].name),
-      Book.new('Throne of Glass',  @authors[4].name)
+      Book.new('Great Expectations', @authors[1].name),
+      Book.new('Bridge of Clay', @authors[2].name),
+      Book.new('Red Queen', @authors[3].name),
+      Book.new('Throne of Glass', @authors[4].name)
     ]
 
     @orders = [
@@ -47,24 +46,22 @@ class Library
       Order.new(@books[3].title, @readers[3].name, @date),
       Order.new(@books[4].title, @readers[4].name, @date)
     ]
-
   end
 
   def save_info_to_file
     @all_data = { books: @books, orders: @orders, readers: @readers, authors: @authors }
-    File.open("all_data.yml", "w") { |file| file.write(@all_data.to_yaml) }
+    File.open('all_data.yml', 'w') { |file| file.write(@all_data.to_yaml) }
   end
-
 end
 
 library = Library.new
-#load all data to arrays
+# load all data to arrays
 library.filling_arrays
-#write all data to file
+# write all data to file
 library.save_info_to_file
-#download all data from file
+# download all data from file
 library.download_from_file
-#download all data from file by categories
+# download all data from file by categories
 library.download_by_categories
 puts "The most active reader #{library.active_reader}"
 puts "The most popular book: \r\n #{library.popular_book}"

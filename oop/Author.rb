@@ -5,5 +5,4 @@ class Author
     @name = name
     @biography = biography
   end
-
 end
