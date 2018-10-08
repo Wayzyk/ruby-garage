@@ -6,8 +6,4 @@ class Book
     @author = author
   end
 
-  def book_title
-    "#{title}"
-  end
-
 end

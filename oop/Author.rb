@@ -6,8 +6,4 @@ class Author
     @biography = biography
   end
 
-  def author_name
-    "#{name}"
-  end
-
 end

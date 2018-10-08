@@ -11,11 +11,11 @@ module Storage
 
 
   def download_by_categories
-    @hard_data = YAML.load(File.read('all_data.yml'))
-    @books = @hard_data[:book]
-    @orders = @hard_data[:order]
-    @authors = @hard_data[:author]
-    @readers = @hard_data[:reader]
+    @hard_data = File.open("all_data.yml") { |yf| YAML::load (yf) }
+    @books = @hard_data[:books]
+    @orders = @hard_data[:orders]
+    @authors = @hard_data[:authors]
+    @readers = @hard_data[:readers]
   end
 
 end

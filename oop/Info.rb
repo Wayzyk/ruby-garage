@@ -1,7 +1,3 @@
-require './Author.rb'
-require './Book.rb'
-require './Order.rb'
-require './Reader.rb'
 module Info
 
    def active_reader
